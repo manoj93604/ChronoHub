@@ -13,7 +13,7 @@ const Home = () => {
       <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<Welcome />} />
+            <Route path="https://manoj93604.github.io/ChronoHub" element={<Welcome />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
           </Routes>
