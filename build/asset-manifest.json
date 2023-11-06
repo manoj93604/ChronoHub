@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/manoj93604/ChronoHub.git/static/css/main.1366e55b.css",
-    "main.js": "/manoj93604/ChronoHub.git/static/js/main.d76a584e.js",
+    "main.js": "/manoj93604/ChronoHub.git/static/js/main.3ca7cd96.js",
     "static/js/787.cda612ba.chunk.js": "/manoj93604/ChronoHub.git/static/js/787.cda612ba.chunk.js",
     "index.html": "/manoj93604/ChronoHub.git/index.html",
     "main.1366e55b.css.map": "/manoj93604/ChronoHub.git/static/css/main.1366e55b.css.map",
-    "main.d76a584e.js.map": "/manoj93604/ChronoHub.git/static/js/main.d76a584e.js.map",
+    "main.3ca7cd96.js.map": "/manoj93604/ChronoHub.git/static/js/main.3ca7cd96.js.map",
     "787.cda612ba.chunk.js.map": "/manoj93604/ChronoHub.git/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1366e55b.css",
-    "static/js/main.d76a584e.js"
+    "static/js/main.3ca7cd96.js"
   ]
 }

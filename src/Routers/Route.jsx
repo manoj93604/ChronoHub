@@ -10,10 +10,10 @@ import SignIn from "../Pages/SignIn";
 const Home = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="ChronoHub">
           <Header />
           <Routes>
-            <Route path="https://manoj93604.github.io/ChronoHub" element={<Welcome />} />
+            <Route path="/" element={<Welcome />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
           </Routes>
