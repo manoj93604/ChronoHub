@@ -14,7 +14,8 @@ const Header = () => {
 
   const isSignUp = location.pathname === "/signup";
   const isSignIn = location.pathname === "/signin";
-  if (isSignUp || isSignIn) {
+  const CtaskDashboard = location.pathname === "/chronotask/your-work";
+  if (isSignUp || isSignIn || CtaskDashboard) {
     return null;
   }
 
@@ -24,6 +25,10 @@ const Header = () => {
 
   const navigateSignIn = () => {
     navigate("/signin");
+  };
+
+  const navigateToChronoTask = () => {
+    navigate("/chronotask/your-work");
   };
 
   return (
@@ -48,17 +53,17 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Products" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
+              <NavDropdown.Item  onClick={navigateToChronoTask}>
                 ChronoTasks
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item >
                 ChronoTrack
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item >
                 ChronoConnect
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">View All</NavDropdown.Item>
+              <NavDropdown.Item >View All</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
             <Nav.Link href="#pricing">About</Nav.Link>
