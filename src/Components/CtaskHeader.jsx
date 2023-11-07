@@ -21,11 +21,15 @@ import {
   faBell,
   faGear,
   faPenToSquare,
+  faPlus,
+  faUserGroup,
+  faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
+
 
 const popover = (
   <Popover id="popover-basic">
-    <Popover.Header as="h3">Profile Settings</Popover.Header>
+    <Popover.Header as="h3" style={{fontSize: '14px'}}>Account</Popover.Header>
     <Popover.Body>
       <div
         className="d-flex align-items-center"
@@ -45,14 +49,23 @@ const popover = (
           </Row>
         </div>
       </div>
-      <div className="d-grid gap-2">
+      <div className="d-grid gap-2 mt-2">
         <Button size="sm" style={{ backgroundColor: "#f1482f", border: 0 }}>
           <FontAwesomeIcon icon={faPenToSquare} style={{marginRight: '2px'}}/>
-          Edit
+          Manage Account
         </Button>
       </div>
-      And here's some <strong>amazing</strong> content. It's very engaging.
-      right?
+        <div className='mt-2 mb-2'>
+          <NavDropdown.Item href="#action/3.1" style={{padding: '5px'}}>Profile</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2" style={{padding: '5px'}}>Personal Setting</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3" style={{padding: '5px'}}>Theam's</NavDropdown.Item>
+        </div>
+        <div className="d-grid gap-2">
+        <Button size="sm" style={{ backgroundColor: "#385a64", border: 0 }}>
+          <FontAwesomeIcon icon={faRightFromBracket} style={{marginRight: '2px'}}/>
+          Sign Out
+        </Button>
+      </div>
     </Popover.Body>
   </Popover>
 );
@@ -186,9 +199,42 @@ const Header = () => {
                 &nbsp;Sriharinivas
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">View All</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">
-                Create Team
+                <FontAwesomeIcon icon={faPlus} /> &nbsp; &nbsp; Invite People to
+                ChronoTask
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                <FontAwesomeIcon
+                  icon={faUserGroup}
+                  style={{ width: "15px", height: "15px" }}
+                />{" "}
+                &nbsp; &nbsp; Create a Team
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown title="Reports" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">
+                Daily Report
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Weekly Report
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Monthly Report
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                View all Reports
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown title="Events" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">HubsMarathon</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">FoodieFest</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">HackTheFest</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                View all Events
               </NavDropdown.Item>
             </NavDropdown>
 
