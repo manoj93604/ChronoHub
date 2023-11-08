@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import '../Assets/css/Welcome.css'
 import Row from "react-bootstrap/Row"
@@ -6,11 +6,16 @@ import Col from "react-bootstrap/Col"
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { Image } from 'react-bootstrap';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 import ProfilePhoto from "../Assets/images/profile.jpg";
 
 
 const CtashDashboard = () => {
+
+  const [key, setKey] = useState('Worked on');
 
   return (
     <Container fluid>
@@ -487,7 +492,416 @@ const CtashDashboard = () => {
           </Card>
         </Col>
         {/* session two container Three end*/}
-        <hr></hr>
+
+        {/*Session Three begins for tab */}
+        <Row>
+          <Col>
+            <Tabs
+              id="controlled-tab-example"
+              activeKey={key}
+              onSelect={(k) => setKey(k)}
+              className="mb-3"
+            >
+              <Tab eventKey="Worked on" title="Worked on">
+                <ListGroup>
+
+                  {/* List One */}
+
+                  <ListGroup.Item action>
+                    <div className="d-flex justify-content-between">
+                      <div
+                        className="d-flex align-items-center"
+                        style={{ padding: "5px", borderRadius: "5px" }}
+                      >
+                        <Image
+                          src="https://cdn-icons-png.flaticon.com/128/4994/4994418.png?ga=GA1.1.252936203.1681415593&track=ais"
+                          style={{ width: "35px", height: "35px", cursor: "pointer" }}
+                        />
+                        <div style={{ marginLeft: "10px" }}>
+                          <Row>
+                            <Col style={{ fontSize: "14px", fontWeight: "bold" }}>
+                              Display the student assigment report on the datatable
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col style={{ fontSize: "12px" }}>
+                              LMS- 05 . Learning Management System
+                            </Col>
+                          </Row>
+                        </div>
+                      </div>
+                      <div className="d-flex align-items-center">
+                      <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195528.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "50",
+                      }}
+                    />
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195545.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "48",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                        <Button variant="primary" size="sm" style={{marginLeft: "10px"}}>
+                          In Progress
+                        </Button>
+                      </div>
+                    </div>
+                  </ListGroup.Item>
+
+                  {/* List Two */}
+
+                  <ListGroup.Item action>
+                    <div className="d-flex justify-content-between">
+                      <div
+                        className="d-flex align-items-center"
+                        style={{ padding: "5px", borderRadius: "5px" }}
+                      >
+                        <Image
+                          src="https://cdn-icons-png.flaticon.com/128/4994/4994418.png?ga=GA1.1.252936203.1681415593&track=ais"
+                          style={{ width: "35px", height: "35px", cursor: "pointer" }}
+                        />
+                        <div style={{ marginLeft: "10px" }}>
+                          <Row>
+                            <Col style={{ fontSize: "14px", fontWeight: "bold" }}>
+                              Add Filters by date, exam, subject, unit
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col style={{ fontSize: "12px" }}>
+                              LMS- 04 . Learning Management System
+                            </Col>
+                          </Row>
+                        </div>
+                      </div>
+                      <div className="d-flex align-items-center">
+                      <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195528.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "50",
+                      }}
+                    />
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195545.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "48",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                        <Button variant="primary" size="sm" style={{marginLeft: "10px"}}>
+                          In Progress
+                        </Button>
+                      </div>
+                    </div>
+                  </ListGroup.Item>
+
+                  {/* List Three */}
+
+                  <ListGroup.Item action>
+                    <div className="d-flex justify-content-between">
+                      <div
+                        className="d-flex align-items-center"
+                        style={{ padding: "5px", borderRadius: "5px" }}
+                      >
+                        <Image
+                          src="https://cdn-icons-png.flaticon.com/128/195/195549.png?ga=GA1.1.252936203.1681415593"
+                          style={{ width: "35px", height: "35px", cursor: "pointer" }}
+                        />
+                        <div style={{ marginLeft: "10px" }}>
+                          <Row>
+                            <Col style={{ fontSize: "14px", fontWeight: "bold" }}>
+                              Finall Unit Testing
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col style={{ fontSize: "12px" }}>
+                              AMS- 56 . Account Management System
+                            </Col>
+                          </Row>
+                        </div>
+                      </div>
+                      <div className="d-flex align-items-center">
+                      <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195528.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "50",
+                      }}
+                    />
+                    <Image
+                      src={ProfilePhoto}
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "48",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                        <Button variant="success" size="sm" style={{marginLeft: "10px"}}>
+                          Completed
+                        </Button>
+                      </div>
+                    </div>
+                  </ListGroup.Item>
+
+                  {/* List Four */}
+
+                  <ListGroup.Item action>
+                    <div className="d-flex justify-content-between">
+                      <div
+                        className="d-flex align-items-center"
+                        style={{ padding: "5px", borderRadius: "5px" }}
+                      >
+                        <Image
+                          src="https://cdn-icons-png.flaticon.com/128/4994/4994418.png?ga=GA1.1.252936203.1681415593&track=ais"
+                          style={{ width: "35px", height: "35px", cursor: "pointer" }}
+                        />
+                        <div style={{ marginLeft: "10px" }}>
+                          <Row>
+                            <Col style={{ fontSize: "14px", fontWeight: "bold" }}>
+                              Create a Dashboard Page
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col style={{ fontSize: "12px" }}>
+                              LMS- 03 . Learning Management System
+                            </Col>
+                          </Row>
+                        </div>
+                      </div>
+                      <div className="d-flex align-items-center">
+                      <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195528.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "50",
+                      }}
+                    />
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195562.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "47",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                        <Button variant="primary" size="sm" style={{marginLeft: "10px"}}>
+                          In Progress
+                        </Button>
+                      </div>
+                    </div>
+                  </ListGroup.Item>
+
+                  {/* List Five */}
+
+                  <ListGroup.Item action>
+                    <div className="d-flex justify-content-between">
+                      <div
+                        className="d-flex align-items-center"
+                        style={{ padding: "5px", borderRadius: "5px" }}
+                      >
+                        <Image
+                          src="https://cdn-icons-png.flaticon.com/128/4994/4994418.png?ga=GA1.1.252936203.1681415593&track=ais"
+                          style={{ width: "35px", height: "35px", cursor: "pointer" }}
+                        />
+                        <div style={{ marginLeft: "10px" }}>
+                          <Row>
+                            <Col style={{ fontSize: "14px", fontWeight: "bold" }}>
+                              Implement the logics for Sign In, Sign Up and Forgot Password
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col style={{ fontSize: "12px" }}>
+                              LMS- 02 . Learning Management System
+                            </Col>
+                          </Row>
+                        </div>
+                      </div>
+                      <div className="d-flex align-items-center">
+                      <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195528.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "50",
+                      }}
+                    />
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195545.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "48",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195562.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "47",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                        <Button variant="success" size="sm" style={{marginLeft: "10px"}}>
+                          Completed
+                        </Button>
+                      </div>
+                    </div>
+                  </ListGroup.Item>
+
+                  {/* List Six */}
+
+                  <ListGroup.Item action>
+                    <div className="d-flex justify-content-between">
+                      <div
+                        className="d-flex align-items-center"
+                        style={{ padding: "5px", borderRadius: "5px" }}
+                      >
+                        <Image
+                          src="https://cdn-icons-png.flaticon.com/128/4994/4994418.png?ga=GA1.1.252936203.1681415593&track=ais"
+                          style={{ width: "35px", height: "35px", cursor: "pointer" }}
+                        />
+                        <div style={{ marginLeft: "10px" }}>
+                          <Row>
+                            <Col style={{ fontSize: "14px", fontWeight: "bold" }}>
+                              Analysis the requirement document
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col style={{ fontSize: "12px" }}>
+                              LMS- 01 . Learning Management System
+                            </Col>
+                          </Row>
+                        </div>
+                      </div>
+                      <div className="d-flex align-items-center">
+                      <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195528.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "50",
+                      }}
+                    />
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195545.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "48",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/128/195/195562.png?ga=GA1.1.252936203.1681415593"
+                      roundedCircle
+                      style={{
+                        width: "35px",
+                        height: "35px",
+                        cursor: "pointer",
+                        zIndex: "47",
+                        marginLeft: "-10px",
+                      }}
+                    />
+                        <Button variant="success" size="sm" style={{marginLeft: "10px"}}>
+                          Completed
+                        </Button>
+                      </div>
+                    </div>
+                  </ListGroup.Item>
+
+                </ListGroup>
+              </Tab>
+
+              <Tab eventKey="Assigned to me" title="Assigned to me">
+                <Row>
+                  <Col className="d-flex align-items-center justify-content-center">
+                    <Card style={{ width: '20rem' }}>
+                      <Card.Img variant="top" src="https://img.freepik.com/free-vector/yoga-office-concept-illustration_114360-6853.jpg?size=626&ext=jpg&uid=R116317829" />
+                      <Card.Body>
+                        <Card.Text className='text-center'>
+                          You currently have no tasks assigned to you. Enjoy your day!
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </Row>
+              </Tab>
+
+              <Tab eventKey="Stared" title="Stared">
+                <Row>
+                  <Col className="d-flex align-items-center justify-content-center">
+                    <Card style={{ width: '20rem' }}>
+                      <Card.Img variant="top" src="https://img.freepik.com/free-vector/cute-astronaut-illustration_114360-8539.jpg?size=626&ext=jpg&uid=R116317829" />
+                      <Card.Body>
+                        <Card.Text className='text-center'>
+                          Star your work for quick access
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </Row>
+              </Tab>
+
+              <Tab eventKey="Report" title="Report">
+                <Row>
+                  <Col className="d-flex align-items-center justify-content-center">
+                    <Card style={{ width: '20rem' }}>
+                      <Card.Img variant="top" src="https://img.freepik.com/free-vector/cute-astronaut-illustration_114360-8539.jpg?size=626&ext=jpg&uid=R116317829" />
+                      <Card.Body>
+                        <Card.Text className='text-center'>
+                          Star your work for quick access
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </Row>
+              </Tab>
+
+            </Tabs>
+          </Col>
+        </Row>
       </Row>
     </Container>
   );

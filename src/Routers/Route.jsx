@@ -12,7 +12,7 @@ import CtaskDashboard from "../Pages/CtaskDashboard";
 const Home = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="manoj93604/ChronoHub.git">
           <Header />
           <CtaskHeader />
           <Routes>

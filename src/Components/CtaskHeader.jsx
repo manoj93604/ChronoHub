@@ -108,10 +108,10 @@ const Header = () => {
                 Assigned to me
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Daily Report
+                Worked On
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
-                Weekly Report
+                Stared
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">View All</NavDropdown.Item>
